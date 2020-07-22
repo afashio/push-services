@@ -12,7 +12,7 @@ class m200722_152830_create_service_lang_table extends Migration
      */
     public function safeUp()
     {
-        $this->createTable(\afashio\services\models\Service::tableName(), [
+        $this->createTable(\afashio\services\models\ServiceLang::tableName(), [
             'id' => $this->primaryKey(),
             'service_id' => $this->integer(),
             'language' => $this->string(6),
@@ -55,6 +55,6 @@ class m200722_152830_create_service_lang_table extends Migration
             '{{%service_lang}}'
         );
 
-        $this->dropTable(\afashio\services\models\Service::tableName());
+        $this->dropTable(\afashio\services\models\ServiceLang::tableName());
     }
 }
