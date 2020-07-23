@@ -15,7 +15,7 @@ class m200722_151959_create_service_table extends Migration
         $this->createTable(\afashio\services\models\Service::tableName(), [
             'id' => $this->primaryKey(),
             'status' => $this->integer(1),
-            'is_main' => $this->integer(1)->defaultValue(0),
+            'sort' => $this->integer()->defaultValue(500),
             'slug' => $this->string(250)->unique(),
         ]);
     }
