@@ -29,6 +29,7 @@ use rico\yii2images\behaviors\ImageBehave;
  * @mixin \afashio\services\models\ServiceLang
  * @property-read string                            $url
  * @property \afashio\services\models\ServiceLang[] $translations
+ * @property int                                    $sort [int(11)]
  */
 class Service extends ActiveRecord
 {
