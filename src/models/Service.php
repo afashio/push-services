@@ -33,6 +33,7 @@ use rico\yii2images\behaviors\ImageBehave;
  */
 class Service extends ActiveRecord
 {
+    public $image;
 
     use BasicStatusTrait;
     use ModelTranslationTrait;
@@ -78,6 +79,7 @@ class Service extends ActiveRecord
         return [
             [['status', 'sort'], 'integer'],
             [['slug'], 'string', 'max' => 250],
+            [['image'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg', 'maxFiles' => 20],
         ];
     }
 

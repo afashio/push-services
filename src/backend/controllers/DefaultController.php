@@ -47,7 +47,7 @@ class DefaultController extends \yii\web\Controller
     {
         $model = new Service();
 
-        if ($model->saveModel()) {
+        if ($model->saveModelWithImage('image')) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -70,7 +70,7 @@ class DefaultController extends \yii\web\Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->saveModel()) {
+        if ($model->saveModelWithImage('image')) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
