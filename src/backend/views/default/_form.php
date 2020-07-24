@@ -58,7 +58,7 @@ use yii\widgets\ActiveForm;
                         ); ?>
                     </div>
                 </div>
-            <? endforeach; ?>
+            <?php endforeach ?>
             <div role="tabpanel" class="tab-pane" id="image">
                 <div class="box-body">
                     <?= $form->field($model, 'image')->widget(
@@ -74,7 +74,7 @@ use yii\widgets\ActiveForm;
                                 ,
                                 'initialPreviewConfig' =>
                                     \afashio\pushHelpers\utils\PreviewUtil::getPreviewOptions(
-                                        \yii\helpers\Url::to(['site/delete-image']),
+                                        \yii\helpers\Url::to(['/site/delete-image']),
                                         $model->getImages()
                                     ),
                                 'initialPreviewAsData' => true,
